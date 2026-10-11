@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F5F1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Square">
+<title>Square</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" aria-live="polite"></main>
+
+<dialog id="add" aria-labelledby="add-title">
+  <form id="add-form" method="dialog" novalidate>
+    <header class="sheet-head">
+      <button type="button" class="icon-btn" data-close aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 id="add-title">New payment</h2>
+      <span class="chip">4 people</span>
+    </header>
+
+    <div class="amount">
+      <label for="amt">Amount</label>
+      <div class="amount-row">
+        <span class="pound">£</span>
+        <input id="amt" name="amount" type="text" inputmode="decimal" autocomplete="off" placeholder="0.00" required>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="row-between">
+        <h3>Split</h3>
+        <span class="muted small" id="split-hint">tap + / − to change shares</span>
+      </div>
+      <div class="bar" id="split-bar" aria-hidden="true"></div>
+      <ul class="people" id="split-people"></ul>
+      <div class="pills" id="presets"></div>
+    </section>
+
+    <fieldset class="paid">
+      <legend>Paid by</legend>
+      <div class="seg" id="payer"></div>
+    </fieldset>
+
+    <div class="field">
+      <label for="desc">What was it for?</label>
+      <input id="desc" name="desc" type="text" placeholder="e.g. Weekly shop" maxlength="80" autocomplete="off">
+    </div>
+
+    <p class="summary" id="summary">Enter an amount</p>
+    <button type="submit" class="btn-primary" id="save">Save payment</button>
+  </form>
+</dialog>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
