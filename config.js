@@ -1,7 +1,6 @@
-// Paste your Supabase project's URL and anon (public) key here.
-// Supabase dashboard → Project Settings → API.
-// Until these are filled in, Square runs in demo mode (saved on each phone only).
+// Supabase project for Square. The anon key is public by design;
+// access is controlled by the row-level security rules in supabase/setup.sql.
 window.SQUARE_CONFIG = {
-  supabaseUrl: 'YOUR_SUPABASE_URL',
-  supabaseKey: 'YOUR_SUPABASE_ANON_KEY'
+  supabaseUrl: 'https://axxgcdixdqfgepaxdtmg.supabase.co',
+  supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4eGdjZGl4ZHFmZ2VwYXhkdG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3NDUzODAsImV4cCI6MjEwNzMyMTM4MH0.wKtWlezPYiB03f96uUz82Q5NYi8Goy_RKAymZAiZPJw'
 };
